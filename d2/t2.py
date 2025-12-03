@@ -11,7 +11,7 @@ def main():
         start, end = r.strip().split('-')
         for d in range(int(start), int(end)+1):
             d_s = str(d)
-            idxes = tuple(range(1   , len(d_s) // 2 + 1))[::-1]
+            idxes = tuple(range(1, len(d_s) // 2 + 1))[::-1]
             for idx in idxes:
                 n_seq = d_s.count(d_s[:idx])
                 if n_seq > 1 and n_seq * idx == len(d_s):
