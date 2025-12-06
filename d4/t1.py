@@ -1,5 +1,3 @@
-import numpy as np
-
 def read_file(p: str):
     with open(p, 'r') as f:
         lines = [[int(j) for j in i.strip().replace('.', '0').replace('@', '1')] for i in f.readlines()]
@@ -7,7 +5,7 @@ def read_file(p: str):
         w = len(lines[0])
         padded_lines = [[0] + i + [0] for i in lines]
         padded_lines = [[0] * (w + 2)] + padded_lines + [[0] * (w + 2)]
-        return padded_lines, (h, w)
+    return padded_lines, (h, w)
 
 def main():
     lines, shape = read_file('input.txt')
